@@ -19,6 +19,6 @@ This is a Javascript web app that allows users to create an interactive to-do li
 
 - @syuyrw
 
-## License
+## Licenses
 
 [MIT](https://choosealicense.com/licenses/mit/)
