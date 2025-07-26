@@ -95,5 +95,13 @@ function loadLists() {
     });
 }
 
+// function to reset lists
+function resetLists() {
+    doList.innerHTML = "";
+    doneList.innerHTML = "";
+    localStorage.clear();
+}
+
 loadLists();
 submitButton.addEventListener("click", newItem);
+resetButton.addEventListener("click", resetLists);
