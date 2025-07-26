@@ -1,0 +1,64 @@
+body,
+html {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#input-area {
+    text-align: center;
+}
+
+#input {
+    width: 400px;
+    height: 35px;
+    font-size: 20px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+button {
+    height: 35px;
+    margin: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+#button-area {
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#to-do-area {
+    width: 500px;
+    min-height: 300px;
+    border: 2px solid black;
+    padding-top: 0px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#done-area {
+    width: 500px;
+    min-height: 300px;
+    border: 2px solid black;
+    padding-top: 0px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
