@@ -1,5 +1,7 @@
 # To-Do-List With Local Storage
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-To--Do%20List-blue?style=for-the-badge)](https://syuyrw.github.io/To-Do-List-with-LocalStorage/)
+
 This is a Javascript web app that allows users to create an interactive to-do list that is stored in browsers local storage
 
 
