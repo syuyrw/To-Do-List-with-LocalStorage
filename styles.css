@@ -1,6 +1,39 @@
-body,
-html {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body, html {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#to-do-area,
+#done-area {
+    width: 90%;
+    max-width: 500px;
+}
+
+#input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px; 
+    height: auto;
+    font-size: 18px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    height: 35px;
 }
 
 h1 {
@@ -9,15 +42,12 @@ h1 {
 }
 
 #input-area {
-    text-align: center;
-}
-
-#input {
-    width: 400px;
-    height: 35px;
-    font-size: 20px;
-    vertical-align: middle;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 button {
@@ -26,6 +56,11 @@ button {
     font-size: 20px;
     vertical-align: middle;
     box-sizing: border-box;
+    background-color: #494949;
+    color: white;
+    border: none;
+    padding: 0 12px;
+    border-radius: 10px;
 }
 
 #button-area {
@@ -38,21 +73,28 @@ h2 {
 }
 
 #to-do-area {
-    width: 500px;
     min-height: 300px;
     border: 2px solid black;
+    border-bottom: 1px solid black;
     padding-top: 0px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
+    background-color: #c5d5e4;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 #done-area {
-    width: 500px;
+    display: block;
     min-height: 300px;
     border: 2px solid black;
+    border-top: 1px solid black;
     padding-top: 0px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 0px;
+    background-color: #8896ab;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 ul {
@@ -61,4 +103,68 @@ ul {
 
 li {
     list-style: none;
+}
+
+/* Hide default checkbox */
+.custom-radio input[type="checkbox"] {
+    display: none;
+}
+
+.custom-radio {
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    font-size: 18px;
+    gap: 6px; /* reduce gap between dot and text */
+    cursor: pointer;
+}
+
+/* Optional: shrink the dot to make it more centered */
+.custom-radio .radio-style {
+    width: 16px;
+    height: 16px;
+    margin: 0; /* remove excess spacing */
+    position: relative;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Center the inner dot better */
+.custom-radio input[type="checkbox"]:checked + .radio-style::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #input {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    #to-do-area,
+    #done-area {
+        min-height: 30%;
+        width: 90%;
+    }
+
+    .custom-radio {
+        font-size: 16px;
+    }
 }

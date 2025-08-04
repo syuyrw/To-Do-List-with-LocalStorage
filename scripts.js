@@ -28,18 +28,23 @@ function addItemToList(text, list, isChecked) {
     checkbox.checked = isChecked;
     checkbox.addEventListener("click", (event) => markDone(event));
 
-    //Create label
-    const label = document.createElement("label");
-    label.textContent = capitalizeFirstLetter(text);
+    // Create custom span for styling
+    const radioStyle = document.createElement("span");
+    radioStyle.className = "radio-style";
 
-    // Create li
+    // Create label to wrap everything
+    const label = document.createElement("label");
+    label.className = "custom-radio";
+    label.appendChild(checkbox);
+    label.appendChild(radioStyle);
+    label.appendChild(document.createTextNode(capitalizeFirstLetter(text)));
+
+    // Create li and append label
     const li = document.createElement("li");
     li.id = "item-" + Date.now();
-    li.appendChild(checkbox);
     li.appendChild(label);
-    //console.log(newLi);
 
-    // Add it to the To-Do area
+    // Append to correct list
     list.appendChild(li);
 }
 
